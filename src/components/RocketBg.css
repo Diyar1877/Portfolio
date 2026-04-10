@@ -1,8 +1,9 @@
 .rocket-bg {
   position: fixed;
   left: 60px;
-  z-index: 1;
-  pointer-events: none;
+  z-index: 50;
+  pointer-events: auto;
+  cursor: pointer;
   opacity: 0.65;
   animation: rocketFloat 12s ease-in-out infinite;
 }

@@ -18,6 +18,12 @@ const contacts = [
     icon: '@',
   },
   {
+    label: 'GitHub',
+    value: 'Diyar1877',
+    href: 'https://github.com/Diyar1877',
+    icon: '<>',
+  },
+  {
     label: 'Phone',
     value: '+49 173 970 7736',
     href: 'tel:+491739707736',

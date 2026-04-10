@@ -2,7 +2,10 @@ import './RocketBg.css'
 
 export default function RocketBg() {
   return (
-    <div className="rocket-bg" aria-hidden="true">
+    <div
+      className="rocket-bg"
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    >
       <svg
         className="rocket-svg"
         viewBox="0 0 200 600"
