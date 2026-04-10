@@ -1,0 +1,63 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050505;
+  --bg-card: #0a0a0a;
+  --red: #ff1a1a;
+  --red-dim: #cc0000;
+  --red-glow: rgba(255, 26, 26, 0.6);
+  --red-subtle: rgba(255, 26, 26, 0.15);
+  --orange: #ff4400;
+  --orange-glow: rgba(255, 68, 0, 0.4);
+  --text: #e0e0e0;
+  --text-dim: #888;
+  --text-bright: #ffffff;
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-dim) var(--bg);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  zoom: 0.9;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red-dim);
+  border-radius: 3px;
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: var(--text-bright);
+  text-shadow: 0 0 10px var(--red-glow);
+}

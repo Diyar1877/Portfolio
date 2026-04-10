@@ -1,0 +1,198 @@
+.bugbounty {
+  padding: 120px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.bb-intro {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.bb-handle {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-bright);
+  letter-spacing: 1px;
+}
+
+.handle-at {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.handle-platform {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-left: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bb-reports {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bb-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 26, 26, 0.06);
+  padding: 28px 32px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.bb-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: var(--red);
+  box-shadow: 0 0 8px var(--red-glow);
+  transition: height 0.5s ease;
+}
+
+.bb-card:hover::before {
+  height: 100%;
+}
+
+.bb-card:hover {
+  border-color: rgba(255, 26, 26, 0.15);
+  transform: translateX(4px);
+}
+
+.bb-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bb-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.bb-id {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.bb-severity {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 2px 10px;
+  border: 1px solid;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.bb-type {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.bb-platform {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bb-title {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 10px;
+  letter-spacing: 0.5px;
+}
+
+.bb-desc {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.bb-method {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  padding: 12px 16px;
+  background: rgba(255, 26, 26, 0.02);
+  border-left: 2px solid rgba(255, 26, 26, 0.15);
+}
+
+.bb-method-label {
+  color: var(--red);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.bb-note {
+  margin-top: 40px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.note-icon {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .bugbounty {
+    padding: 80px 0;
+  }
+  .bb-card {
+    padding: 20px;
+  }
+  .bb-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .bb-meta {
+    flex-wrap: wrap;
+  }
+  .bb-title {
+    font-size: 1rem;
+  }
+  .bb-desc {
+    font-size: 0.85rem;
+  }
+  .bb-method {
+    font-size: 0.7rem;
+    padding: 10px 12px;
+  }
+  .bb-handle {
+    font-size: 0.95rem;
+  }
+  .bb-note {
+    font-size: 0.7rem;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

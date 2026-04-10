@@ -1,0 +1,190 @@
+.contact {
+  padding: 120px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 26, 26, 0.06);
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--red);
+  box-shadow: 0 0 6px var(--red-glow);
+  transition: width 0.5s ease;
+}
+
+.contact-card:hover::before {
+  width: 100%;
+}
+
+.contact-card:hover {
+  border-color: rgba(255, 26, 26, 0.15);
+  transform: translateX(6px);
+}
+
+.contact-icon {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--red);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 26, 26, 0.2);
+  flex-shrink: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-bright);
+  font-weight: 500;
+}
+
+.contact-arrow {
+  font-size: 1rem;
+  color: var(--text-dim);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-arrow {
+  color: var(--red);
+  transform: translateX(4px);
+}
+
+.contact-terminal {
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 26, 26, 0.1);
+  overflow: hidden;
+}
+
+.terminal-header {
+  display: flex;
+  gap: 6px;
+  padding: 10px 16px;
+  background: rgba(255, 26, 26, 0.03);
+  border-bottom: 1px solid rgba(255, 26, 26, 0.06);
+}
+
+.terminal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 26, 26, 0.3);
+}
+
+.terminal-dot:first-child { background: rgba(255, 40, 40, 0.6); }
+
+.terminal-body {
+  padding: 20px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 2;
+}
+
+.terminal-body p {
+  margin: 0;
+}
+
+.t-prompt {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.t-cmd {
+  color: var(--text-bright);
+}
+
+.t-output {
+  color: var(--text-dim);
+  padding-left: 16px;
+}
+
+.t-cursor {
+  color: var(--red);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 0;
+  }
+  .contact-text {
+    font-size: 0.95rem;
+  }
+  .contact-card {
+    padding: 16px;
+    gap: 14px;
+  }
+  .contact-value {
+    font-size: 0.8rem;
+    word-break: break-all;
+  }
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.75rem;
+  }
+  .terminal-body {
+    font-size: 0.7rem;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,50 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-line {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+  margin: 0 auto 24px;
+}
+
+.footer-brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--red);
+  text-shadow: 0 0 20px var(--red-glow);
+}
+
+.footer-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 16px;
+  }
+  .footer-text {
+    font-size: 0.75rem;
+  }
+  .footer-copy {
+    font-size: 0.65rem;
+  }
+}

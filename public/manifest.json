@@ -1,0 +1,15 @@
+{
+  "name": "Diyar Mohammed | 1877",
+  "short_name": "1877",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/logo-1877.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

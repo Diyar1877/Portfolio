@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — 1877</title>
+  <link rel="icon" type="image/png" href="/logo-1877.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #050505;
+      color: #e0e0e0;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 40px;
+    }
+    .code {
+      font-family: 'Silkscreen', cursive;
+      font-size: 6rem;
+      font-weight: 700;
+      color: #ff1a1a;
+      text-shadow: 0 0 40px rgba(255, 26, 26, 0.6);
+      letter-spacing: 8px;
+      margin-bottom: 16px;
+    }
+    .msg {
+      font-size: 1rem;
+      color: #888;
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+    .terminal {
+      text-align: left;
+      display: inline-block;
+      background: #0a0a0a;
+      border: 1px solid rgba(255, 26, 26, 0.1);
+      padding: 24px 32px;
+      font-size: 0.85rem;
+      line-height: 2;
+      color: #888;
+    }
+    .prompt { color: #ff1a1a; }
+    .cmd { color: #e0e0e0; }
+    .output { color: #666; }
+    .link {
+      color: #ff1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 26, 26, 0.3);
+      transition: all 0.3s;
+    }
+    .link:hover {
+      text-shadow: 0 0 10px rgba(255, 26, 26, 0.6);
+      border-color: #ff1a1a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="code">404</div>
+    <p class="msg">ENDPOINT NOT FOUND</p>
+    <div class="terminal">
+      <div><span class="prompt">$</span> <span class="cmd">curl -I /this-page</span></div>
+      <div class="output">HTTP/1.1 404 Not Found</div>
+      <div><span class="prompt">$</span> <span class="cmd">cd /</span></div>
+      <div class="output">&rarr; <a href="/" class="link">return to origin</a></div>
+    </div>
+  </div>
+</body>
+</html>
