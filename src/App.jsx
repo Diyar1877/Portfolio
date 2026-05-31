@@ -9,6 +9,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import BugBounty from './components/BugBounty'
 import Contact from './components/Contact'
+import MatrixRain from './components/MatrixRain'
 import ParticleField from './components/ParticleField'
 import ScanLines from './components/ScanLines'
 import LoadingScreen from './components/LoadingScreen'
@@ -29,6 +30,7 @@ function AppContent() {
   return (
     <div className="app">
       {showLoading && <LoadingScreen onComplete={() => setShowLoading(false)} />}
+      <MatrixRain />
       <ParticleField />
       <ScanLines />
       <RocketBg />

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520" fill="none">
+  <defs>
+    <filter id="glow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur1"/>
+      <feColorMatrix
+        in="blur1"
+        type="matrix"
+        values="1 0 0 0 0
+                0 0.12 0 0 0
+                0 0 0.12 0 0
+                0 0 0 1 0"
+        result="redBlur"
+      />
+      <feGaussianBlur in="redBlur" stdDeviation="42" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="redBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <g id="px1">
+      <rect x="40" y="0" width="40" height="40"/>
+      <rect x="0" y="40" width="40" height="40"/>
+      <rect x="40" y="40" width="40" height="40"/>
+      <rect x="40" y="80" width="40" height="40"/>
+      <rect x="40" y="120" width="40" height="40"/>
+      <rect x="40" y="160" width="40" height="40"/>
+      <rect x="0" y="200" width="40" height="40"/>
+      <rect x="40" y="200" width="40" height="40"/>
+      <rect x="80" y="200" width="40" height="40"/>
+    </g>
+    <g id="px8">
+      <rect x="0" y="0" width="40" height="40"/>
+      <rect x="40" y="0" width="40" height="40"/>
+      <rect x="80" y="0" width="40" height="40"/>
+      <rect x="0" y="40" width="40" height="40"/>
+      <rect x="80" y="40" width="40" height="40"/>
+      <rect x="40" y="80" width="40" height="40"/>
+      <rect x="0" y="120" width="40" height="40"/>
+      <rect x="40" y="120" width="40" height="40"/>
+      <rect x="80" y="120" width="40" height="40"/>
+      <rect x="0" y="160" width="40" height="40"/>
+      <rect x="80" y="160" width="40" height="40"/>
+      <rect x="0" y="200" width="40" height="40"/>
+      <rect x="40" y="200" width="40" height="40"/>
+      <rect x="80" y="200" width="40" height="40"/>
+    </g>
+    <g id="px7">
+      <rect x="0" y="0" width="40" height="40"/>
+      <rect x="40" y="0" width="40" height="40"/>
+      <rect x="80" y="0" width="40" height="40"/>
+      <rect x="80" y="40" width="40" height="40"/>
+      <rect x="40" y="80" width="40" height="40"/>
+      <rect x="40" y="120" width="40" height="40"/>
+      <rect x="0" y="160" width="40" height="40"/>
+      <rect x="0" y="200" width="40" height="40"/>
+    </g>
+  </defs>
+
+  <g fill="#ff1a1a" filter="url(#glow)" transform="translate(120 140)">
+    <use href="#px1"/>
+    <use href="#px8" transform="translate(300 0)"/>
+    <use href="#px7" transform="translate(620 0)"/>
+    <use href="#px7" transform="translate(930 0)"/>
+  </g>
+</svg>
